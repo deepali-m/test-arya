@@ -1,0 +1,40 @@
+//namespcaling or giving nick names to Matter.World and other
+const World = Matter.World;
+const Engine = Matter.Engine;
+const Bodies = Matter.Bodies;
+//declaring some variables
+ var engine,world,object;
+
+
+function setup() {
+  createCanvas(400,400);
+  //creating Physics Engine by name engine
+  engine = Engine.create();
+
+  //giving name to the physical World as world 
+  world = engine.world;
+  //creating a rectangular body in the world by name object
+  object = Bodies.rectangle(200,200,50,50);
+  //adding the body(object) to the world
+  World.add(world,object);
+
+  //createSprite(400, 200, 50, 50);
+}
+
+function draw() {
+  background("black");  
+  //drawSprites();
+  rectMode(CENTER);
+  rect(200,200,50,50);
+
+}
+
+
+
+
+//physics engine
+// matter.js (library)
+ //object
+ //1. Matter.World  : Physical world  
+ //2. Matter.Engine : used to create physics engine 
+ //3. Matter.Bodies : Objects which live
